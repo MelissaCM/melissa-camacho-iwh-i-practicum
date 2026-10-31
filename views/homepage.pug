@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Marketing Campaigns
+        p Custom objects retrieved from HubSpot
+
+        a(href="/update-cobj") Create a new campaign
+
+        table
+            thead
+                tr
+                    th Name
+                    th Channel
+                    th Budget
+            tbody
+                each record in data
+                    tr
+                        td= record.properties.name
+                        td= record.properties.channel
+                        td= record.properties.budget
