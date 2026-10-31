@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Create a Marketing Campaign
+
+        form(action="/update-cobj" method="POST")
+            label(for="name") Campaign Name
+            input(type="text" id="name" name="name" required)
+
+            label(for="channel") Channel
+            input(type="text" id="channel" name="channel" required)
+
+            label(for="budget") Budget
+            input(type="number" id="budget" name="budget" required)
+
+            button(type="submit") Create Campaign
+
+        a(href="/") Return to the homepage
