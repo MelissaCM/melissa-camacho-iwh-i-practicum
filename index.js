@@ -15,7 +15,7 @@ const CUSTOM_OBJECT_TYPE = process.env.CUSTOM_OBJECT_TYPE;
 
 // TODO: ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
 app.get('/', async (req, res) => {
-    const url = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}`;
+    const url = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}?limit=100&properties=name,channel,budget`;
 
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
